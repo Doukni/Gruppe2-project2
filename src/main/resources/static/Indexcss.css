@@ -1,0 +1,65 @@
+body {
+    font-family: "Segoe UI Black";
+    background-color: #f0f2f5;
+    margin: 0;
+}
+
+.slide-fade-in-nav {
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: slideFadeIn 1s ease-out forwards;
+}
+
+@keyframes slideFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #14c6d1, #7237e5);
+    display: flex;
+    font-size: 25px;
+    font-family: "Segoe UI Black";
+    border-radius: 12px;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu li {
+    padding: 11px 30px;
+
+
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+}
+
+.menu li a:hover {
+    background-color: #575757;
+    color: white;
+}
+
+.menu li.GiftMe {
+    margin-right: auto;
+}
