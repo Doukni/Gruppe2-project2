@@ -16,7 +16,11 @@
 
             <li class="GiftMe"><a href="#">GiftMe</a></li>
             <li><a href="#">Wishlist</a></li>
-            <li><a href="/createAccount">Login</a></li>
+
+            <li>
+                <span th:if="${session.user != null}"  class="logged-in-user" th:text="${session.user.firstName}"></span>
+                <a th:if="${session.user == null}" href="/saveAccount">Login</a>
+            </li>
 
 
         </ul>

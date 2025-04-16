@@ -63,3 +63,6 @@ nav {
 .menu li.GiftMe {
     margin-right: auto;
 }
+.logged-in-user {
+    color: white;
+}
