@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>wishlist</title>
+    <link rel="stylesheet" th:href="@{/wishlist.css}">
+</head>
+<body>
+
+<nav class="slide-fade-in-nav">
+
+    <ul class="menu">
+
+        <li class="GiftMe"><a href="#">GiftMe</a></li>
+        <li><a th:href="@{/wishlist}">Wishlist</a></li>
+
+        <li>
+            <span th:if="${session.user != null}"  class="logged-in-user" th:text="${session.user.firstName}"></span>
+            <a th:if="${session.user == null}" href="/saveAccount">Login</a>
+        </li>
+
+
+
+    </ul>
+</nav>
+
+
+
+
+<div>
+    <form th:action="@{/wishlist/add}" method="post">
+        <label for="wishlistName">Enter name of the wishlist:</label>
+        <input type="text" id="wishlistName" name="name" required />
+        <button type="submit">Add Wishlist</button>
+    </form>
+</div>
+
+
+</body>
+</html>

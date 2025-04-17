@@ -1,0 +1,138 @@
+form {
+
+
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    border: 3px solid transparent;
+    border-image: linear-gradient(to right, #14c6d1, #7237e5) 1;
+    width: 350px;
+    margin: 20px auto;
+}
+
+label{
+    margin-left: 64px;
+}
+button{
+    margin-left: 12px;
+}
+form input[type="text"],
+form button {
+    width: 93%;
+    margin-bottom: 10px;
+}
+
+form input[type="text"] {
+    height: 40px;
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+form input[type="text"]:focus {
+    border-color: #14c6d1;
+}
+
+form button {
+    background-color: #14c6d1;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #7237e5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    font-family: "Segoe UI Black";
+    background-color: #f0f2f5;
+    margin: 0;
+}
+
+.slide-fade-in-nav {
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: slideFadeIn 1s ease-out forwards;
+}
+
+@keyframes slideFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #14c6d1, #7237e5);
+    display: flex;
+    font-size: 25px;
+    font-family: "Segoe UI Black";
+    border-radius: 12px;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu li {
+    padding: 11px 30px;
+
+
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+}
+
+.menu li a:hover {
+    background-color: #575757;
+    color: white;
+}
+
+.menu li.GiftMe {
+    margin-right: auto;
+}
+.logged-in-user {
+    color: white;
+}
