@@ -11,8 +11,8 @@
 
     <ul class="menu">
 
-        <li class="GiftMe"><a href="#">GiftMe</a></li>
-        <li><a th:href="@{/wishlist}">Wishlist</a></li>
+        <li class="GiftMe"><a th:href="@{/mainPage}">GiftMe</a></li>
+        <li><a th:href="@{/saveWishlist}">Wishlist</a></li>
 
         <li>
             <span th:if="${session.user != null}"  class="logged-in-user" th:text="${session.user.firstName}"></span>
@@ -26,15 +26,24 @@
 
 
 
-
 <div>
-    <form th:action="@{/wishlist/add}" method="post">
+    <form th:action="@{/saveWishlist}"  th:object="${wishlist}" method="post">
         <label for="wishlistName">Enter name of the wishlist:</label>
-        <input type="text" id="wishlistName" name="name" required />
+        <input type="text" id="wishlistName" th:field="*{wishlistName}" name="wishlistName" required />
         <button type="submit">Add Wishlist</button>
     </form>
 </div>
 
+<div class="wishlist-container">
+    <h3>Your Wishlists:</h3>
+    <div class="wishlist-boxes">
+        <div th:each="wishlist : ${wishlists}" class="wishlist-box">
+            <a th:href="@{'/wishlist/' + ${wishlist.id}}" style="text-decoration: none; color: inherit;">
+                <span th:text="${wishlist.wishlistName}"></span>
+            </a>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>

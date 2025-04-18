@@ -14,8 +14,8 @@
 
         <ul class="menu">
 
-            <li class="GiftMe"><a href="#">GiftMe</a></li>
-            <li><a th:href="@{/wishlist}">Wishlist</a></li>
+            <li class="GiftMe"><a th:href="@{/mainPage}">GiftMe</a></li>
+            <li><a th:href="@{/saveWishlist}">Wishlist</a></li>
 
             <li>
                 <span th:if="${session.user != null}"  class="logged-in-user" th:text="${session.user.firstName}"></span>

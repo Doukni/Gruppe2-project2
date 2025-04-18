@@ -3,42 +3,44 @@ package com.example.gruppe2project2.model;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 public class Wishlist {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    int id;
-
-    //int user_id;
+    private int id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-            @JoinColumn(name = "user_id", nullable = false)
-    UserInfo user;
+    @JoinColumn(name = "user_id", nullable = false)
+    private UserInfo user;
+
+    @OneToMany(mappedBy = "wishlist", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Item> items;
 
     @Column
-    String itemName;
+    private String wishlistName;
+
 
     @Column
-    String wishlistName;
+    private String itemName;
 
-    public Wishlist(int id, UserInfo user, String itemName, String wishlistName) {
+
+    public Wishlist() {}
+
+    public Wishlist(int id, UserInfo user, String wishlistName) {
         this.id = id;
         this.user = user;
-        this.itemName = itemName;
         this.wishlistName = wishlistName;
     }
 
-    public Wishlist() {
-
+    public List<Item> getItems() {
+        return items;
     }
 
-    public String getItemName() {
-        return itemName;
-    }
-
-    public void setItemName(String itemName) {
-        this.itemName = itemName;
+    public void setItems(List<Item> items) {
+        this.items = items;
     }
 
     public UserInfo getUser() {
@@ -60,8 +62,14 @@ public class Wishlist {
     public String getWishlistName() {
         return wishlistName;
     }
+
     public void setWishlistName(String wishlistName) {
         this.wishlistName = wishlistName;
     }
+    public String getItemName() {
+        return itemName;
+    }
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
+    }
 }
-

@@ -1,39 +1,6 @@
-.wishlist-container {
-    margin-top: 20px;
-}
 
-.wishlist-boxes {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.wishlist-box {
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px;
-    border: 3px solid transparent;
-    border-image: linear-gradient(to right, #14c6d1, #7237e5) 1;
-    width: 250px;
-    height: 150px;
-    margin: 10px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.wishlist-box span {
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.wishlist-box:hover {
-    background-color: #f9f9f9;
-    cursor: pointer;
-}
 
 form {
-
-
     background-color: white;
     border-radius: 10px;
     padding: 20px;
@@ -43,12 +10,14 @@ form {
     margin: 20px auto;
 }
 
-label{
+label {
     margin-left: 64px;
 }
-button{
+
+button {
     margin-left: 12px;
 }
+
 form input[type="text"],
 form button {
     width: 93%;
@@ -84,6 +53,14 @@ form button {
 form button:hover {
     background-color: #7237e5;
 }
+
+
+
+
+
+
+
+
 
 
 
