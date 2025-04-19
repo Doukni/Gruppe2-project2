@@ -44,8 +44,6 @@ nav {
 
 .menu li {
     padding: 11px 30px;
-
-
 }
 
 .menu li a {
@@ -63,6 +61,74 @@ nav {
 .menu li.GiftMe {
     margin-right: auto;
 }
-.logged-in-user {
-    color: white;
+
+html, body {
+    height: 100%;
+    margin: 0;
 }
+
+.image-slider {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 140px);
+}
+
+.slider-container {
+    display: flex;
+    width: 100%;
+}
+
+.slider-image {
+    width: 200px;
+    height: 200px;
+    margin: 0 5px;
+    flex-shrink: 0;
+    position: relative;
+    animation: slide 10s linear infinite;
+}
+
+.slider-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.customer-support-box {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to right, #14c6d1, #7237e5);
+    color: white;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.customer-support-box p {
+    margin: 5px;
+    font-size: 16px;
+}
+
+.customer-support-box a {
+    color: white;
+    text-decoration: none;
+}
+
+.customer-support-box a:hover {
+    text-decoration: underline;
+}
+
