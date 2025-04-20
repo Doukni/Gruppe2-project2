@@ -19,7 +19,7 @@ public class PageControllor {
     @Autowired
     private UserRepo userRepo;
 
-    @GetMapping("/")
+    @GetMapping("/mainPage")
     public String mainPage() {
         return "Index";
         // it returns the html for you to see on the page which is called "Index"
