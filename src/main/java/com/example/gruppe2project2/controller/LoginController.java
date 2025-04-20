@@ -32,7 +32,7 @@ public class LoginController {
 
         if (userInfo != null && userInfo.getPassword().equals(password)) {
             session.setAttribute("user", userInfo);
-            return "redirect:/mainPage";
+            return "redirect:/";
         } else {
             model.addAttribute("error", "Invalid email or password");
             return "loginPage";
